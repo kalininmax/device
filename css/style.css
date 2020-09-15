@@ -15,3 +15,16 @@
   url('../fonts/gilroyextrabold.woff2') format('woff2'),
   url('../fonts/gilroyextrabold.woff') format('woff');
 }
+
+:root {
+  --basic-black: #000000;
+  --basic-dark: #363636;
+  --basic-white: #ffffff;
+  --basic-grey: #464646;
+  --basic-half-grey: #7e7e7e;
+  --basic-grey-light: #e5e5e5;
+  --special-yellow: #f7e296;
+  --special-green: #91c92f;
+  --special-yellow-dark: #f0c52e;
+  --special-pink: #f6dada;
+}
