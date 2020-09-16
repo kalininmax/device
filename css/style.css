@@ -67,12 +67,15 @@ img {
   background-color: var(--special-yellow);
 }
 
-.main-header-logo:hover,
-.main-header-logo:focus {
+.main-header-logo[href]:hover,
+.main-header-logo[href]:focus,
+.main-footer-logo[href]:hover,
+.main-footer-logo[href]:focus {
   opacity: 0.6;
 }
 
-.main-header-logo:active {
+.main-header-logo[href]:active,
+.main-footer-logo[href]:active {
   opacity: 0.3;
 }
 
@@ -308,20 +311,12 @@ img {
   opacity: 0.1;
 }
 
-.main-footer-logo:hover,
-.main-footer-logo:focus {
-  opacity: 0.6;
-}
-
-.main-footer-logo:active {
-  opacity: 0.3;
-}
-
 .modal-close {
   background-color: var(--special-yellow-dark);
   opacity: 0.5;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .modal-close:hover,
