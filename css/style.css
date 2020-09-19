@@ -428,6 +428,10 @@ img {
   background-color: var(--basic-dark);
 }
 
+.main-footer-logo path {
+  fill: var(--special-yellow-dark);
+}
+
 .footer-address,
 .footer-phone {
   line-height: 20px;
