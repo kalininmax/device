@@ -270,6 +270,18 @@ img {
   list-style: none;
 }
 
+.brands-link {
+  filter: grayscale(100%);
+  opacity: 0.2;
+}
+
+.brands-link:hover,
+.brands-link:focus,
+.brands-link:active {
+  filter: none;
+  opacity: 1;
+}
+
 .content-title {
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
