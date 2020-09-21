@@ -59,10 +59,18 @@
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}  
+}
+
+.page {
+  height: 100%;
+}
 
 .page-body {
   min-width: 1240px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', 'Arial', sans-serif;
@@ -83,8 +91,31 @@ img {
   height: auto;
 }
 
-.main-header {
+.main-navigation {
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  width: 1160px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-top: 44px;
+  padding-bottom: 50px;
   background-color: var(--special-yellow);
+}
+
+.main-navigation-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 220px;
+  column-gap: 65px;
+  justify-content: space-between;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.main-header-logo {
+  position: absolute;
+  top: -20px;
+  left: 60px;
 }
 
 .main-header-logo[href]:hover,
@@ -99,7 +130,9 @@ img {
   opacity: 0.3;
 }
 
+
 .search-form-input {
+  float: left;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -116,11 +149,13 @@ img {
 }
 
 .search-form-input:focus {
+  padding-bottom: 3px;
   border-bottom: 2px solid var(--basic-black);
   opacity: 1;
 }
 
 .search-form-button {
+  display: none;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -130,6 +165,10 @@ img {
   outline: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.search-form-input:focus + .search-form-button {
+  display: block;
 }
 
 .search-form-button:hover,
@@ -144,8 +183,20 @@ img {
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 50px;
+  padding: 0 60px;
   list-style: none;
   text-transform: uppercase;
+}
+
+.site-navigation-submenu {
+  display: none;
+  line-height: 20px;
+  list-style: none;
+  text-transform: none;
 }
 
 .site-navigation-link {
@@ -168,16 +219,21 @@ img {
   opacity: 0.3;
 }
 
-.site-navigation-submenu {
-  line-height: 20px;
-  list-style: none;
-  text-transform: none;
-}
-
 .user-block,
 .market-block {
+  margin: 0;
+  padding: 0;
   line-height: 20px;
   list-style: none;
+}
+
+.user-block {
+  justify-self: end;
+}
+
+.market-block {
+  display: flex;
+  justify-content: space-between;
 }
 
 .user-block a:hover,
