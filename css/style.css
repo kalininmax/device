@@ -103,7 +103,7 @@ img {
   margin-top: 40px;
   padding: 0 60px;
   padding-top: 44px;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
   background-color: var(--special-yellow);
 }
 
@@ -259,10 +259,10 @@ img {
 
 .promo-slider {
   margin: 0;
-  margin-bottom: 116px;
+  margin-bottom: 105px;
   padding: 0 60px;
   list-style: none;
-  background: linear-gradient(var(--special-yellow) 96px, var(--basic-white) 96px);
+  background: linear-gradient(var(--special-yellow) 130px, var(--basic-white) 130px);
 }
 
 .promo-slider-item {
@@ -280,11 +280,12 @@ img {
 }
 
 .slider-item-inner {
-  padding-top: 60px;
+  padding-top: 93px;
 }
 
 .promo-slider-title {
   margin: 0;
+  margin-bottom: 25px;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 47px;
@@ -331,7 +332,7 @@ img {
 
 .categories-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, min-content);
   justify-content: space-between;
   margin: 0;
   margin-bottom: 184px;
