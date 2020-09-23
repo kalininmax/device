@@ -504,7 +504,7 @@ img {
 .index-content {
   display: grid;
   grid-template-columns: 560px 560px;
-  justify-content: space-between;
+  column-gap: 40px;
 }
 
 .about-us,
