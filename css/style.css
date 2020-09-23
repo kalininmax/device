@@ -97,14 +97,12 @@ img {
 }
 
 .main-navigation {
-  position: relative;
   display: grid;
   grid-template-rows: min-content 1fr;
-  margin-top: 40px;
   padding: 0 60px;
-  padding-top: 44px;
+  padding-top: 20px;
   padding-bottom: 35px;
-  background-color: var(--special-yellow);
+  background: linear-gradient(var(--basic-white) 40px, var(--special-yellow) 40px);
 }
 
 .main-navigation-wrapper {
@@ -116,9 +114,7 @@ img {
 }
 
 .main-header-logo {
-  position: absolute;
-  top: -20px;
-  left: 60px;
+  margin-bottom: 20px;
 }
 
 .main-header-logo[href]:hover,
@@ -189,7 +185,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  margin-top: 38px;
+  margin-top: 41px;
   padding: 0;
   list-style: none;
   text-transform: uppercase;
