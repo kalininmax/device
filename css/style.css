@@ -69,6 +69,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  min-width: 1200px;
   min-height: 100%;
   margin: 0;
   padding: 0;
@@ -338,7 +339,7 @@ img {
   list-style: none;
 }
 
-.categories-item::before {
+.categories-link::before {
   content: "";
   display: block;
   width: 160px;
@@ -349,27 +350,27 @@ img {
   background-position: center;
 }
 
-.item-vr::before {
+.link-vr::before {
   background-image: url(../img/icon-vr.svg);
 }
 
-.item-monopod::before {
+.link-monopod::before {
   background-image: url(../img/icon-monopod.svg);
 }
 
-.item-camera::before {
+.link-camera::before {
   background-image: url(../img/icon-camera.svg);
 }
 
-.item-fitness-tracker::before {
+.link-fitness-tracker::before {
   background-image: url(../img/icon-fitness-tracker.svg);
 }
 
-.item-smart-watch::before {
+.link-smart-watch::before {
   background-image: url(../img/icon-smart-watch.svg);
 }
 
-.item-quadcopter::before {
+.link-quadcopter::before {
   background-image: url(../img/icon-quadcopter.svg);
 }
 
