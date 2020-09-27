@@ -291,9 +291,12 @@ img {
   opacity: 0.3;
 }
 
+.promo-content {
+  margin-bottom: 116px;
+}
+
 .promo-slider {
   margin: 0;
-  margin-bottom: 109px;
   padding: 0 60px;
   padding-left: 89px;
   list-style: none;
@@ -394,6 +397,7 @@ img {
   padding: 0;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-size: 18px;
+  letter-spacing: 0.05em;
   line-height: 22px;
   font-weight: 800;
   list-style: none;
@@ -412,18 +416,26 @@ img {
 
 .link-vr::before {
   background-image: url(../img/icon-vr.svg);
+  background-position: center 52px;
 }
 
 .link-monopod::before {
   background-image: url(../img/icon-monopod.svg);
+  background-position: center 26px;
 }
 
 .link-camera::before {
   background-image: url(../img/icon-camera.svg);
+  background-position: center 36px;
+}
+
+.link-fitness-tracker {
+  letter-spacing: normal;
 }
 
 .link-fitness-tracker::before {
   background-image: url(../img/icon-fitness-tracker.svg);
+  background-position: 27px 48px;
 }
 
 .link-smart-watch::before {
