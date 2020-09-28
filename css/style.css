@@ -114,6 +114,10 @@ img {
   font-size: 16px;
 }
 
+.active {
+  display: block;
+}
+
 .main-navigation {
   padding: 0;
   padding-top: 20px;
@@ -349,18 +353,18 @@ img {
 }
 
 .promo-slider-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: none;
+  grid-template-columns: auto 580px;
   justify-content: space-between;
 }
 
-.promo-slider-item:nth-child(n+2) {
-  display: none;
+.promo-slider-item.active {
+  display: grid;
 }
 
 .slider-item-info {
   padding-top: 94px;
-  padding-left: 127px;
+  padding-left: 80px;
 }
 
 .promo-slider-title {
@@ -387,26 +391,25 @@ img {
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-template-rows: min-content min-content;
-  grid-column-gap: 60px;
+  grid-auto-flow: column;
+  grid-column-gap: 24px;
   grid-row-gap: 15px; 
   margin: 0;
   margin-top: 52px;
-  order: 2;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
 }
 
-
 .specification-name {
+  margin: 0;
   font-size: 13px;
   line-height: 15px;
-  letter-spacing: 0.1em;
-  order: 2;
 }
 
 .specification-value {
-  margin: 0;
   font-size: 36px;
   line-height: 42px;
-  letter-spacing: 0.1em;
 }
 
 .button {
@@ -529,6 +532,10 @@ img {
   padding-bottom: 67px;
 }
 
+.services-slider-item.active {
+  display: block;
+}
+
 .service-title {
   margin-bottom: 40px;
 }
@@ -557,7 +564,8 @@ img {
   line-height: 40px;
 }
 
-.services-controls-button:active {
+.services-controls-button:active,
+.services-controls-item.active .services-controls-button {
   width: 280px;
   padding-right: 120px;
   color: var(--special-yellow);
@@ -589,10 +597,6 @@ img {
   right: 28px;
   top: 41px;
   background-image: url(../img/icon-credit.svg);
-}
-
-.active {
-  display: block;
 }
 
 .brands {
