@@ -392,7 +392,7 @@ img {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
-  background-color: transparent;
+  background: linear-gradient(transparent 16px, var(--special-yellow-dark) 16px, var(--special-yellow-dark) 24px, transparent 24px);
   border: none;
   cursor: pointer;
 }
@@ -533,7 +533,7 @@ img {
   width: 280px;
   padding-right: 120px;
   color: var(--special-yellow);
-  background-color: var(--basic-black);
+  background: var(--basic-black);
 }
 
 .services-slider-item::after {
@@ -567,13 +567,15 @@ img {
   display: block;
 }
 
+.brands {
+  margin-bottom: 82px;
+}
 
 .brands-list {
   display: grid;
   grid-template-columns: repeat(4, 260px);
   column-gap: 40px;
   margin: 0;
-  margin-bottom: 90px;
   padding: 0;
   list-style: none;
 }
@@ -594,41 +596,48 @@ img {
   display: grid;
   grid-template-columns: 560px 560px;
   column-gap: 40px;
+  padding-top: 7px;
 }
 
 .about-us,
 .contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: 50px;
-  padding-bottom: 86px;
+  padding-bottom: 77px;
 }
 
 .about-us-title,
 .contacts-title {
-  margin-bottom: 41px;
+  margin-bottom: 25px;
 }
 
 .about-us-info {
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .about-us-list {
-  margin-bottom: 62px;
-  padding-top: 18px;
+  margin-top: 35px;
+  margin-bottom: 53px;
   padding-left: 18px;
   list-style: circle;
 }
 
 .about-us-list-item {
   padding-left: 14px;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .contacts-info {
   margin-bottom: 38px;
 }
 
+.about-us-link,
 .contacts-link {
-  margin-top: 77px;
+  width: 260px;
+  margin-top: auto;
+  line-height: 40px;
 }
 
 .page-catalog-title {
