@@ -274,6 +274,7 @@ img {
 .user-block {
   display: flex;
   justify-content: space-between;
+  margin-right: 151px;
 }
 
 .user-block .profile-link {
@@ -287,6 +288,7 @@ img {
 .market-block {
   display: flex;
   justify-content: space-between;
+  justify-self: end;
   width: 219px;
   margin-left: 63px;
 }
@@ -786,28 +788,14 @@ img {
   background-color: var(--basic-dark);
 }
 
-.footer-inner-top {
+.main-footer .container {
   display: grid;
-  grid-template-columns: min-content 1fr 220px;
-  justify-content: space-between;
-  margin-bottom: 32px;
-}
-
-.footer-inner-middle {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  justify-content: space-between;
-  margin-bottom: 65px;
-}
-
-.footer-inner-bottom {
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  justify-content: space-between;
+  grid-template-columns: auto auto min-content;
 }
 
 .main-footer-logo {
-  margin-top: 18px;
+  margin-top: 19px;
+  margin-bottom: 32px;
 }
 
 .main-footer-logo path {
@@ -819,18 +807,29 @@ img {
   margin-right: 40px;
 }
 
+.main-footer .market-block {
+  margin-left: 0;
+}
+
 .footer-address,
 .footer-phone {
   margin: 0;
   line-height: 20px;
 }
 
+.footer-phone {
+  margin-left: auto;
+}
+
 .footer-navigation {
-  width: 440px;
-  margin: 0;
-  padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  width: 426px;
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 60px;
+  padding: 0;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -850,12 +849,13 @@ img {
 }
 
 .footer-social {
+  grid-column: 2/3;
   width: 220px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  justify-self: center;
   margin: 0;
+  margin-left: 135px;
   padding: 0;;
   list-style: none;
 }
@@ -875,6 +875,8 @@ img {
 
 .footer-copyright {
   margin: 0;
+  margin-top: 5px;
+  margin-left: auto;
 }
 
 .footer-copyright-link:hover,
