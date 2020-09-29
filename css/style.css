@@ -48,6 +48,7 @@
   --special-black-active: rgba(0, 0, 0, .3);
   --special-grey: #ebebeb;
   --special-grey-hover: #d9d9d9;
+  --special-grey-light: #dcdcdc;
 }
 
 .visually-hidden {
@@ -70,9 +71,11 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   min-width: 1200px;
+  max-width: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -673,6 +676,8 @@ img {
 }
 
 .page-catalog {
+  display: grid;
+  grid-template-columns: 320px 1fr;
   padding-top: 43px;
 }
 
@@ -686,6 +691,7 @@ img {
 }
 
 .page-title {
+  grid-column: 1/-1;
   padding: 0 60px;
   margin-bottom: 32px;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -695,6 +701,7 @@ img {
 }
 
 .breadcrumbs {
+  grid-column: 1/-1;
   display: flex;
   padding: 0 60px;
   margin-bottom: 49px;
@@ -720,11 +727,6 @@ img {
   opacity: 0.1;
 }
 
-.filters,
-.sorting {
-  background-color: var(--basic-grey-light);
-}
-
 .filters-title,
 .sorting-title {
   margin: 0;
@@ -748,12 +750,23 @@ img {
 }
 
 .sorting {
+  position: relative;
   display: flex;
   min-height: 70px;
   align-items: center;
   padding-left: 74px;
   margin-bottom: 70px;
 }
+
+.sorting::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 70px;
+  width: 100vw;
+  background-color: var(--basic-grey-light);
+  z-index: -1;
+} 
 
 .sorting-list {
   margin-left: 74px;
@@ -791,8 +804,36 @@ img {
 }
 
 .filters {
-  padding-top: 25px;
+  position: relative;
+}
+
+.filters::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: var(--basic-grey-light);
+  z-index: -1;
+}
+
+.filters-title {
+  position: relative;
+  padding: 25px 0;
   padding-left: 60px;
+  z-index: 1;
+}
+
+.filters-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: var(--special-grey-light);
+  z-index: -1;
 }
 
 .catalog {
