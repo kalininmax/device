@@ -907,9 +907,7 @@ img {
 .pagination{
   display: flex;
   width: 760px;
-  min-height: 70px;
   justify-content: space-between;
-  align-items: center;
   margin: 0;
   margin-top: 40px;
   margin-bottom: 78px;
@@ -924,6 +922,11 @@ img {
   background-color: var(--special-grey);
 }
 
+.pagination-item {
+  text-align: center;
+  line-height: 70px;
+}
+
 .pagination-link-number {
   margin-right: 30px;
 }
@@ -934,8 +937,7 @@ img {
 
 .pagination-link-back,
 .pagination-link-next {
-  width: 120px;
-  padding: 25px 30px;
+  padding: 0 30px;
 }
 
 .pagination-link-back[href]:hover,
