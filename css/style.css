@@ -344,7 +344,7 @@ img {
 }
 
 .promo-content {
-  margin-bottom: 116px;
+  margin-bottom: 80px;
 }
 
 .promo-slider {
@@ -457,6 +457,10 @@ img {
   line-height: 22px;
   font-weight: 800;
   list-style: none;
+}
+
+.categories-item {
+  margin-top: 36px;
 }
 
 .categories-link::before {
