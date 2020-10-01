@@ -910,38 +910,47 @@ img {
 
 .pagination{
   display: flex;
-  width: 760px;
-  justify-content: space-between;
+  min-width: 760px;
+  justify-content: center;
   margin: 0;
+  padding: 0;
   margin-top: 40px;
   margin-bottom: 78px;
   margin-left: auto;
-  padding: 0;
+  list-style: none;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.1em;
-  list-style: none;
   background-color: var(--special-grey);
 }
 
-.pagination-item {
+.pagination-item a {
+  display: block;
+  padding: 25px 0;
   text-align: center;
-  line-height: 70px;
 }
 
 .pagination-link-number {
   margin-right: 30px;
 }
 
-.pagination-item:nth-child(4) .pagination-link-number {
+.pagination-item:nth-last-child(-n+2) .pagination-link-number {
   margin-right: 0;
 }
 
 .pagination-link-back,
 .pagination-link-next {
-  padding: 0 30px;
+  min-width: 120px;
+}
+
+.pagination-item-back {
+  margin-right: auto;
+}
+
+.pagination-item-next {
+  margin-left: auto;
 }
 
 .pagination-link-back[href]:hover,
