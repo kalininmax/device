@@ -682,6 +682,7 @@ img {
 .page-catalog {
   display: grid;
   grid-template-columns: 320px 1fr;
+  grid-template-rows: min-content min-content 1fr;
   padding-top: 43px;
 }
 
@@ -766,8 +767,8 @@ img {
   content: "";
   position: absolute;
   left: 0;
-  height: 70px;
-  width: 100vw;
+  height: 100%;
+  width: calc(50vw + 260px);
   background-color: var(--basic-grey-light);
   z-index: -1;
 } 
@@ -817,7 +818,7 @@ img {
   top: 0;
   right: 0;
   height: 100%;
-  width: 100vw;
+  width: calc(50vw - 260px);
   background-color: var(--basic-grey-light);
   z-index: -1;
 }
@@ -835,7 +836,7 @@ img {
   top: 0;
   right: 0;
   height: 100%;
-  width: 100vw;
+  width: calc(50vw - 260px);
   background-color: var(--special-grey-light);
   z-index: -1;
 }
@@ -848,6 +849,7 @@ img {
 .catalog-list {
   display: grid;
   grid-template-columns: 360px 360px;
+  align-content: start;
   margin: 0;
   padding: 0;
   margin-left: 72px;
