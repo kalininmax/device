@@ -181,10 +181,6 @@ img {
   margin-left: 0;
 }
 
-.site-navigation-catalog .site-navigation-link {
-  letter-spacing: 0.1em;
-}
-
 .site-navigation-submenu {
   position: absolute;
   left: -60px;
