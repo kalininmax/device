@@ -349,16 +349,23 @@ img {
 
 .promo-slider {
   margin: 0;
-  padding: 0 60px;
-  padding-left: 89px;
+  padding: 0 30px;
   list-style: none;
   background: linear-gradient(var(--special-yellow) 130px, var(--basic-white) 130px);
 }
 
 .promo-slider-item {
   display: none;
-  grid-template-columns: auto 580px;
-  justify-content: space-between;
+  grid-template-columns: 525px 560px;
+  column-gap: 44px;
+}
+
+.slider-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 525px;
+  min-height: 510px;
 }
 
 .promo-slider-item.active {
@@ -367,7 +374,6 @@ img {
 
 .slider-item-info {
   padding-top: 94px;
-  padding-left: 80px;
 }
 
 .promo-slider-title {
@@ -382,6 +388,7 @@ img {
 .promo-slider-text {
   margin: 0;
   margin-bottom: 50px;
+  max-width: 480px;
   line-height: 20px;
 }
 
