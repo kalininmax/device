@@ -263,7 +263,6 @@ img {
 }
 
 .search-form-button {
-  display: none;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -272,13 +271,14 @@ img {
   border: 2px solid var(--basic-black);
   outline: none;
   background-color: transparent;
+  opacity: 0;
   cursor: pointer;
 }
 
 .search-form-input:focus + .search-form-button,
 .search-form-button:focus,
 .search-form-button:active {
-  display: block;
+  opacity: 1;;
 }
 
 .search-form-button:hover,
