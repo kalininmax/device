@@ -140,8 +140,10 @@ img {
 
 .main-header-logo {
   display: block;
+  width: 163px;
+  height: 35px;
   margin-left: 60px;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
 }
 
 .main-header-logo[href]:hover,
@@ -159,6 +161,7 @@ img {
 .site-navigation {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   margin: 0;
   margin-top: 32px;
   padding: 0 60px;
@@ -294,6 +297,8 @@ img {
 
 .user-block,
 .market-block {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   line-height: 20px;
@@ -301,7 +306,6 @@ img {
 }
 
 .user-block {
-  display: flex;
   justify-content: space-between;
   margin-right: 151px;
 }
@@ -315,7 +319,6 @@ img {
 }
 
 .market-block {
-  display: flex;
   justify-content: space-between;
   justify-self: end;
   width: 219px;
@@ -340,7 +343,7 @@ img {
 }
 
 .promo-content {
-  margin-bottom: 60px;
+  margin-bottom: 96px;
 }
 
 .promo-slider {
@@ -358,6 +361,7 @@ img {
 
 .slider-image-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   max-width: 525px;
@@ -395,7 +399,7 @@ img {
 
 .promo-slider-specification {
   display: grid;
-  grid-template-columns: repeat(3, max-content);
+  grid-template-columns: max-content;
   grid-template-rows: min-content min-content;
   grid-auto-flow: column;
   column-gap: 24px;
@@ -451,7 +455,8 @@ img {
 .categories-list {
   display: grid;
   grid-template-columns: repeat(6, min-content);
-  justify-content: space-between;
+  justify-content: center;
+  gap: 40px;
   margin: 0;
   padding: 0;
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -460,10 +465,6 @@ img {
   line-height: 22px;
   font-weight: 800;
   list-style: none;
-}
-
-.categories-item {
-  margin-top: 36px;
 }
 
 .categories-link::before {
@@ -996,6 +997,9 @@ img {
 }
 
 .main-footer-logo {
+  display: block;
+  width: 163px;
+  height: 35px;
   margin-top: 19px;
   margin-bottom: 32px;
 }
@@ -1016,6 +1020,7 @@ img {
 .footer-address,
 .footer-phone {
   margin: 0;
+  max-width: 300px;
   line-height: 20px;
 }
 
@@ -1054,6 +1059,7 @@ img {
   grid-column: 2/3;
   width: 220px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0;
