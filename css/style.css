@@ -368,6 +368,21 @@ img {
   min-height: 510px;
 }
 
+.slider-image-wrapper .slider-image-1 {
+  margin-right: 22px;
+  margin-bottom: 24px;
+}
+
+.slider-image-wrapper .slider-image-2 {
+  margin-right: 8px;
+  margin-top: 25px;
+}
+
+.slider-image-wrapper .slider-image-3 {
+  margin-left: 2px;
+  margin-bottom: 12px;
+}
+
 .promo-slider-item.active {
   display: grid;
 }
