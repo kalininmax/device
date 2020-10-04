@@ -1044,6 +1044,7 @@ img {
 }
 
 .catalog-item {
+  position: relative;
   display: grid;
   grid-template-columns: max-content max-content;
   grid-template-rows: min-content max-content;
@@ -1051,6 +1052,8 @@ img {
 
 .catalog-item-image {
   grid-column: 1/-1;
+  width: 360px;
+  height: 380px;
   margin-bottom: 30px;
 }
 
@@ -1079,6 +1082,20 @@ img {
 
 .catalog-item-controls {
   display: none;
+  position: absolute;
+  top: 170px;
+  left: 78px;
+  margin: 0;
+  text-align: center;
+}
+
+.catalog-item:first-child .catalog-item-controls {
+  display: block;
+}
+
+.add-to-cart-link {
+  width: 200px;
+  margin-bottom: 7px;
 }
 
 .add-to-compare-link {
