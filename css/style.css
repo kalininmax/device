@@ -169,7 +169,7 @@ img {
   justify-content: flex-end;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: 31px;
+  margin-top: 30px;
   padding: 0 60px;
   padding-right: 57px;
   list-style: none;
@@ -188,6 +188,22 @@ img {
   position: relative;
   margin-right: auto;
   margin-left: 0;
+}
+
+.site-navigation-catalog a {
+  position: relative;
+  padding-right: 38px;
+}
+
+.site-navigation-catalog a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 22px;
+  height: 100%;
+  background-image: url(../img/icon-plus.svg);
+  background-repeat: no-repeat;
+  background-position: 0 6px;
 }
 
 .site-navigation-submenu {
@@ -262,6 +278,23 @@ img {
   opacity: 0.3;
 }
 
+.search-field {
+  position: relative;
+  min-height: 50px;
+}
+
+.search-field::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 100%;
+  background-image: url(../img/icon-search.svg);
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+
 .search-form-input:hover {
   opacity: 0.6;
 }
@@ -284,7 +317,7 @@ img {
   cursor: pointer;
 }
 
-.search-form-input:focus + .search-form-button,
+.search-form-input:focus ~ .search-form-button,
 .search-form-button:focus,
 .search-form-button:active {
   opacity: 1;;
@@ -337,7 +370,31 @@ img {
 
 .user-block a,
 .market-block a {
+  position: relative;
   padding-left: 26px;
+}
+
+.user-block a::before,
+.market-block a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 26px;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 4px center;
+}
+
+.login-link::before {
+  background-image: url(../img/icon-user.svg);
+}
+
+.compare-link::before {
+  background-image: url(../img/icon-chart.svg);
+}
+
+.cart-link::before {
+  background-image: url(../img/icon-cart.svg);
 }
 
 .user-block a:hover,
@@ -357,16 +414,21 @@ img {
 }
 
 .promo-slider {
+  display: grid;
+  padding: 0;
   margin: 0;
-  padding: 0 30px;
   list-style: none;
-  background: linear-gradient(var(--special-yellow) 130px, var(--basic-white) 130px);
+  /* background: linear-gradient(var(--special-yellow) 131px, var(--basic-white) 131px); */
 }
 
 .promo-slider-item {
-  display: none;
+  display: grid;
+  grid-row: 1/-1;
+  grid-column: 1/-1;
   grid-template-columns: 525px 560px;
   column-gap: 44px;
+  padding-left: 30px;
+  background: linear-gradient(var(--special-yellow) 131px, var(--basic-white) 131px);
 }
 
 .slider-image-wrapper {
@@ -380,25 +442,26 @@ img {
 
 .slider-image-wrapper .slider-image-1 {
   margin-right: 22px;
-  margin-bottom: 24px;
+  margin-bottom: 21px;
 }
 
 .slider-image-wrapper .slider-image-2 {
   margin-right: 8px;
-  margin-top: 25px;
+  margin-top: 28px;
 }
 
 .slider-image-wrapper .slider-image-3 {
   margin-left: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
-.promo-slider-item.active {
-  display: grid;
+.active {
+  z-index: 1;
 }
 
 .slider-item-info {
-  padding-top: 94px;
+  padding-top: 95px;
+  padding-left: 1px;
 }
 
 .promo-slider-title {
@@ -412,7 +475,7 @@ img {
 
 .promo-slider-text {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 52px;
   max-width: 480px;
   line-height: 20px;
 }
@@ -423,27 +486,30 @@ img {
 
 .promo-slider-specification {
   display: grid;
-  grid-template-columns: max-content;
-  grid-template-rows: min-content min-content;
-  grid-auto-flow: column;
-  column-gap: 24px;
-  row-gap: 15px; 
+  grid-template-columns: auto;
+  grid-template-rows: min-content 1fr;
+  column-gap: 60px;
+  row-gap: 15px;
+  max-width: 450px;
   margin: 0;
   margin-top: 52px;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 300;
-  letter-spacing: 0.1em;
 }
 
 .specification-name {
   margin: 0;
   font-size: 13px;
   line-height: 15px;
+  letter-spacing: 0.1em;
 }
 
 .specification-value {
+  grid-row: 1/2;
+  margin: 0;
   font-size: 36px;
   line-height: 42px;
+  letter-spacing: 0.1em;
 }
 
 .button {
@@ -457,7 +523,7 @@ img {
   letter-spacing: 0.2em;
   text-align: center;
   text-transform: uppercase;
-  background: linear-gradient(transparent 16px, var(--special-yellow-dark) 16px, var(--special-yellow-dark) 24px, transparent 24px);
+  background: linear-gradient(transparent 15px, var(--special-yellow-dark) 15px, var(--special-yellow-dark) 23px, transparent 23px);
   border: none;
   cursor: pointer;
 }
@@ -546,51 +612,53 @@ img {
 .services-inner {
   display: grid;
   grid-template-columns: 284px 1fr;
+  align-items: start;
   width: 1180px;
   margin: 0 auto;
-  padding-bottom: 68px;
+  padding-bottom: 63px;
   padding-left: 20px;
 }
 
 .services-slider {
+  display: grid;
   margin: 0;
   padding: 0;
-  padding-left: 115px;
+  padding-left: 116px;
   list-style: none;
   order: 1;
 }
 
 .services-slider-item {
   position: relative;
-  display: none;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
   padding-top: 70px;
   padding-bottom: 67px;
-}
-
-.services-slider-item.active {
-  display: block;
+  background: linear-gradient(var(--basic-white) 99px, var(--basic-grey-light) 99px);
 }
 
 .service-title {
-  margin-bottom: 40px;
+  margin-bottom: 41px;
 }
 
 .service-description {
   margin: 0;
   max-width: 580px;
+  line-height: 30px;
   letter-spacing: 0.1em;
 }
 
 .services-controls {
   margin: 0;
   padding: 0;
-  padding-top: 80px;
+  padding-top: 79px;
+  padding-bottom: 54px;
   border-right: 7px solid var(--basic-black);
   list-style: none;
 }
 
 .services-controls-item {
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 }
 
 .services-controls-button.button {
@@ -599,7 +667,7 @@ img {
 }
 
 .services-controls-button:active,
-.services-controls-item.active .services-controls-button {
+.controls-item-current .services-controls-button {
   width: 280px;
   padding-right: 120px;
   color: var(--special-yellow);
@@ -662,30 +730,42 @@ img {
   display: grid;
   grid-template-columns: 560px 560px;
   column-gap: 40px;
-  padding-top: 7px;
 }
 
 .about-us,
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 50px;
+  padding-top: 57px;
   padding-bottom: 77px;
+}
+
+.about-us::before,
+.contacts::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 7px;
+  background-color: var(--basic-black);
 }
 
 .about-us-title,
 .contacts-title {
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .about-us-info {
-  margin-bottom: 25px;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .about-us-list {
-  margin-top: 35px;
-  margin-bottom: 53px;
+  margin-top: 20px;
+  margin-bottom: 55px;
   padding-left: 18px;
   list-style: circle;
 }
@@ -696,7 +776,8 @@ img {
 }
 
 .contacts-info {
-  margin-bottom: 38px;
+  margin: 0;
+  margin-bottom: 40px;
 }
 
 .about-us-link,
