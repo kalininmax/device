@@ -428,6 +428,7 @@ img {
 }
 
 .promo-content {
+  position: relative;
   margin-bottom: 96px;
 }
 
@@ -436,6 +437,42 @@ img {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.promo-slider-controls {
+  position: absolute;
+  bottom: 150px;
+  right: 108px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 72px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo-slider-controls button {
+  position: relative;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid var(--basic-black);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.promo-slider-controls .current::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border: 1px solid var(--basic-black);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .promo-slider-item {
