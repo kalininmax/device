@@ -235,8 +235,7 @@ img {
   margin-bottom: 16px;
 }
 
-.site-navigation-catalog:hover .site-navigation-submenu,
-.site-navigation-catalog:focus .site-navigation-submenu,
+.site-navigation-catalog:focus-within .site-navigation-submenu,
 .site-navigation-link:hover + .site-navigation-submenu,
 .site-navigation-link:focus + .site-navigation-submenu  {
   display: grid;
@@ -801,7 +800,7 @@ img {
 }
 
 .brands {
-  margin-bottom: 82px;
+  margin-bottom: 88px;
 }
 
 .brands-list {
@@ -814,6 +813,7 @@ img {
 }
 
 .brands-link {
+  display: block;
   filter: grayscale(100%);
   opacity: 0.2;
 }
@@ -838,7 +838,7 @@ img {
   flex-direction: column;
   align-items: flex-start;
   padding-top: 57px;
-  padding-bottom: 76px;
+  padding-bottom: 77px;
 }
 
 .about-us::before,
@@ -864,7 +864,7 @@ img {
 
 .about-us-list {
   margin-top: 20px;
-  margin-bottom: 55px;
+  margin-bottom: 53px;
   padding-left: 18px;
   list-style: circle;
 }
@@ -1432,7 +1432,7 @@ img {
   content: "";
   position: absolute;
   left: 20px;
-  bottom: 22px;
+  bottom: 14px;
   width: 80px;
   height: 7px;
   background-color: var(--special-yellow-dark);
@@ -1505,7 +1505,8 @@ img {
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  margin-left: 135px;
+  margin-top: 5px;
+  margin-left: 164px;
   padding: 0;
   list-style: none;
 }
