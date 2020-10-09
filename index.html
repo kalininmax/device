@@ -219,14 +219,29 @@
     </div>
   </footer>
   <section class="modal-map modal">
-    <h2>Как до нас добраться</h2>
+    <h2 class="visually-hidden">Как до нас добраться</h2>
     <!--Здесь будет карта-->
-    <button class="modal-close" type="button">Закрыть</button>
+    <button class="modal-close" type="button" aria-label="Закрыть" title="Закрыть"></button>
   </section>
   <section class="modal-feedback modal">
-    <h2>Обратная связь</h2>
-    <!--Здесь будет форма обратной связи -->
-    <button class="modal-close" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Обратная связь</h2>
+    <form action="https://echo.htmlacademy.ru" class="feedback-form">
+      <p class="feedback-item">
+        <label class="feedback-name-field" for="feedback-name">Ваше имя:
+          <input class="feedback-input" id="feedback-name" name="name" type="text" placeholder="Имя Фамилия">
+        </label>
+        <label class="feedback-email-field" for="feedback-email">Ваш e-mail:
+          <input class="feedback-input" id="feedback-email" name="e-mail" type="email" placeholder="email@example.com">
+        </label>
+      </p>
+      <p class="feedback-item">
+        <label class="feedback-textarea-field" for="feedback-message">Текст письма:
+          <textarea class="feedback-textarea" name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+        </label>
+      </p>
+      <button class="button button-submit" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button" aria-label="Закрыть" title="Закрыть"></button>
   </section>
 </body>
 
