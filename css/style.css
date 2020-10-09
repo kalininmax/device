@@ -268,6 +268,7 @@ img {
 }
 
 .search-form-input {
+  width: 360px;
   padding: 0;
   padding-left: 38px;
   border: 0;
@@ -302,12 +303,13 @@ img {
   opacity: 0.6;
 }
 
-.search-form-input:focus {
+.search-form:focus-within .search-form-input {
   border-bottom: 2px solid var(--basic-black);
   opacity: 1;
 }
 
 .search-form-button {
+  width: 80px;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
@@ -457,8 +459,8 @@ img {
 .promo-slider-controls button {
   position: relative;
   padding: 0;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: transparent;
   border: 1px solid var(--basic-black);
   border-radius: 50%;
@@ -640,6 +642,48 @@ img {
   list-style: none;
 }
 
+.link-fitness-tracker {
+  letter-spacing: normal;
+}
+
+.categories-link {
+  position: relative;
+}
+
+.categories-link svg {
+  position: absolute;
+}
+
+.link-vr svg {
+  top: 52px;
+  left: 31px;
+}
+
+.link-monopod svg {
+  top: 26px;
+  left: 37px;
+}
+
+.link-camera svg {
+  top: 36px;
+  left: 44px;
+}
+
+.link-fitness-tracker svg {
+  top: 48px;
+  left: 27px;
+}
+
+.link-smart-watch svg {
+  top: 31px;
+  left: 52px;
+}
+
+.link-quadcopter svg {
+  top: 46px;
+  left: 14px;
+}
+
 .categories-link::before {
   content: "";
   display: block;
@@ -647,40 +691,11 @@ img {
   height: 160px;
   margin-bottom: 38px;
   background-color: var(--special-yellow);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.link-vr::before {
-  background-image: url(../img/icon-vr.svg);
-  background-position: center 52px;
-}
-
-.link-monopod::before {
-  background-image: url(../img/icon-monopod.svg);
-  background-position: center 26px;
-}
-
-.link-camera::before {
-  background-image: url(../img/icon-camera.svg);
-  background-position: center 36px;
-}
-
-.link-fitness-tracker {
-  letter-spacing: normal;
-}
-
-.link-fitness-tracker::before {
-  background-image: url(../img/icon-fitness-tracker.svg);
-  background-position: 27px 48px;
-}
-
-.link-smart-watch::before {
-  background-image: url(../img/icon-smart-watch.svg);
-}
-
-.link-quadcopter::before {
-  background-image: url(../img/icon-quadcopter.svg);
+.categories-link:hover::before,
+.categories-link:focus::before {
+  background-color: var(--special-yellow-dark);
 }
 
 .categories-link:active {
