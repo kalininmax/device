@@ -1110,6 +1110,8 @@ img {
 .sorting-list,
 .direction-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -1134,41 +1136,57 @@ img {
   width: calc(50vw + 260px);
   background-color: var(--basic-grey-light);
   z-index: -1;
-} 
-
-.sorting-list {
-  margin-left: 74px;
-  flex-wrap: wrap;
 }
 
-.sorting-list-item {
-  margin-right: 30px;
+.sorting-title {
+  margin-right: 73px;
+}
+
+.sorting-list {
+  width: 285px;
+  margin-right: auto;
 }
 
 .direction-list {
-  margin-left: auto;
+  width: 52px;
 }
 
-.sorting-list-link {
+.sorting-link {
   opacity: 0.3;
 }
 
-.sorting-list-link:hover,
-.sorting-list-link:focus {
+.sorting-link[href]:hover,
+.sorting-link[href]:focus {
   opacity: 0.6;
 }
 
-.direction-list-link {
+.direction-link {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url(../img/delta.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.2;
 }
 
-.direction-list-link:hover {
+.direction-link-descending {
+  transform: rotate(180deg);
+}
+
+.direction-link[href]:hover {
   opacity: 0.4;
 }
 
-.sorting-list-link:active,
-.direction-list-link:active {
+.sorting-link[href]:active,
+.direction-link[href]:active {
   opacity: 1;
+}
+
+.sorting-link-current,
+.direction-link-current {
+  opacity: 1;
+  cursor: auto;
 }
 
 .filters {
