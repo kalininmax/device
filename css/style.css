@@ -53,6 +53,8 @@
   --special-grey-hover: #d9d9d9;
   --special-grey-light: #dcdcdc;
   --special-grey-input: #f2f2f2;
+  --font-family-gilroy: 'Gilroy', 'Arial', sans-serif;
+  --font-family-opensans: 'Open Sans', 'Arial', sans-serif;
 }
 
 .visually-hidden {
@@ -67,7 +69,7 @@
 }
 
 .page {
-  height: 100%;
+  height: 100%; 
 }
 
 .page-body {
@@ -80,7 +82,7 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: var(--font-family-opensans);
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
@@ -107,7 +109,7 @@ img {
 
 .content-title {
   margin: 0;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -117,7 +119,7 @@ img {
 .content-list {
   margin: 0;
   padding: 0;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 16px;
 }
@@ -243,7 +245,7 @@ img {
 }
 
 .site-navigation-link {
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-size: 18px;
   line-height: 22px;
   font-weight: 800;
@@ -274,7 +276,7 @@ img {
   padding-left: 38px;
   border: 0;
   outline: none;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: var(--font-family-opensans);
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -311,7 +313,7 @@ img {
 
 .search-form-button {
   width: 80px;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: var(--font-family-opensans);
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -407,7 +409,7 @@ img {
 
 .main-footer .user-block::before {
   background-image: url(../img/icon-user-yellow.svg);
-  background-position: 3px 4px;
+  background-position: 0 5px;
 }
 
 .main-footer .compare-link::before {
@@ -494,7 +496,7 @@ img {
 .promo-slider-item::before {
   content: "";
   position: absolute;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-size: 179px;
   line-height: 187px;
   font-weight: 800;
@@ -553,7 +555,7 @@ img {
 .promo-slider-title {
   margin: 0;
   margin-bottom: 26px;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -579,7 +581,7 @@ img {
   max-width: 450px;
   margin: 0;
   margin-top: 52px;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 300;
 }
 
@@ -602,7 +604,7 @@ img {
   display: block;
   margin: 0;
   padding: 0;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-size: 18px;
   line-height: 40px;
   font-weight: 800;
@@ -635,7 +637,7 @@ img {
   gap: 40px;
   margin: 0;
   padding: 0;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-size: 18px;
   letter-spacing: 0.05em;
   line-height: 22px;
@@ -902,7 +904,7 @@ img {
   padding: 10px 60px;
   margin: 0;
   margin-bottom: 20px;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -954,7 +956,7 @@ img {
 .sorting-title {
   margin: 0;
   padding: 0;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -997,7 +999,7 @@ img {
   margin: 0;
   margin-bottom: 30px;
   border-top: 2px solid var(--basic-black);
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-size: 14px;
   line-height: 17px;
   font-weight: 800;
@@ -1109,7 +1111,7 @@ img {
 }
 
 .filter-range .price-controls {
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-size: 14px;
   line-height: 16px;
 }
@@ -1262,9 +1264,32 @@ img {
 }
 
 .catalog-item {
+  position: relative;
   display: grid;
   grid-template-columns: max-content max-content;
   grid-template-rows: min-content max-content;
+}
+
+.catalog-item-new::before {
+  content: "new";
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--special-black-active);
+  border-radius: 50%;
+  font-family: var(--font-family-gilroy);
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--special-black-active);
+  text-transform: uppercase;
+  z-index: 1;
 }
 
 .catalog-item .image-wrapper {
@@ -1293,7 +1318,7 @@ img {
 .catalog-item-title {
   width: 270px;
   margin: 0;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1304,7 +1329,7 @@ img {
 .catalog-item-price {
   width: 87px;
   text-align: right;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -1359,7 +1384,7 @@ img {
   margin-bottom: 78px;
   margin-left: auto;
   list-style: none;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1485,7 +1510,7 @@ img {
   margin-left: 20px;
   margin-bottom: 60px;
   padding: 0;
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1574,7 +1599,6 @@ img {
 }
 
 .modal-map {
-  display: block;
   top: 120px;
   bottom: auto;
   width: 960px;
@@ -1624,7 +1648,7 @@ img {
   padding-left: 20px;
   width: 100%;
   border: 2px solid transparent;
-  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-family: var(--font-family-opensans);
   font-size: 14px;
   line-height: 19px;
   background-color: var(--special-grey-input);
@@ -1648,7 +1672,7 @@ img {
 } 
 
 .modal-feedback label {
-  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-family: var(--font-family-gilroy);
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
