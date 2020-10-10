@@ -643,12 +643,13 @@ img {
   list-style: none;
 }
 
-.link-fitness-tracker {
-  letter-spacing: normal;
-}
-
 .categories-link {
   position: relative;
+  display: block;
+}
+
+.link-fitness-tracker {
+  letter-spacing: normal;
 }
 
 .categories-link svg {
