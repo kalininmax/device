@@ -1046,6 +1046,29 @@ img {
   background-position: center;
 }
 
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:hover::after,
+.filter-input-checkbox:focus + label::before,
+.filter-input-checkbox:focus + label::after,
+.filter-input-radio + label:hover::before,
+.filter-input-radio + label:hover::after,
+.filter-input-radio:focus + label::before,
+.filter-input-radio:focus + label::after {
+  opacity: 0.6;
+}
+
+.filter-input-checkbox:active + label::before,
+.filter-input-checkbox:active + label::after,
+.filter-input-radio:active + label::before,
+.filter-input-radio:active + label::after {
+  opacity: 1;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+  opacity: 0.25;
+}
+
 .filter-radio label::before {
   content: "";
   position: absolute;
@@ -1199,7 +1222,8 @@ img {
   transform: rotate(180deg);
 }
 
-.direction-link[href]:hover {
+.direction-link[href]:hover,
+.direction-link[href]:focus {
   opacity: 0.4;
 }
 
@@ -1351,7 +1375,8 @@ img {
   align-content: flex-start;
   justify-content: center;
   margin: 0;
-  opacity: 0;  z-index: 1;
+  opacity: 0;
+  z-index: 1;
 }
 
 .add-to-cart-link {
@@ -1462,6 +1487,7 @@ img {
   position: relative;
   display: grid;
   grid-template-columns: auto auto min-content;
+  align-items: start;
 }
 
 .main-footer .container::after {
