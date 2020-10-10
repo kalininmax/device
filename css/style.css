@@ -1569,14 +1569,16 @@ img {
   bottom: 0;
   left: 0;
   margin: 0 auto;
+  box-shadow: 0px 10px 16px var(--special-black-shadow);
   z-index: 10;
 }
 
 .modal-map {
+  display: block;
   top: 120px;
   bottom: auto;
-  width: 994px;
-  height: 593px;
+  width: 960px;
+  height: 559px;
   background-image: url(../img/map-big.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -1595,7 +1597,6 @@ img {
   padding-top: 92px;
   padding-bottom: 60px;
   background-color: var(--basic-white);
-  box-shadow: 0px 10px 16px var(--special-black-shadow);
 }
 
 .modal-feedback .modal-close {
