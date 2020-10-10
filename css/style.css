@@ -236,6 +236,7 @@ img {
 }
 
 .site-navigation-catalog:focus-within .site-navigation-submenu,
+.site-navigation-catalog:hover .site-navigation-submenu,
 .site-navigation-link:hover + .site-navigation-submenu,
 .site-navigation-link:focus + .site-navigation-submenu  {
   display: grid;
