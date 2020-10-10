@@ -1351,7 +1351,7 @@ img {
   align-content: flex-start;
   justify-content: center;
   margin: 0;
-  opacity: 0;
+  opacity: 0;  z-index: 1;
 }
 
 .add-to-cart-link {
