@@ -644,7 +644,6 @@ img {
 }
 
 .categories-link {
-  position: relative;
   display: block;
 }
 
@@ -686,7 +685,12 @@ img {
   left: 14px;
 }
 
-.categories-link::before {
+.categories-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.categories-item::before {
   content: "";
   display: block;
   width: 160px;
@@ -695,12 +699,12 @@ img {
   background-color: var(--special-yellow);
 }
 
-.categories-link:hover::before,
-.categories-link:focus::before {
+.categories-item:hover::before,
+.categories-item:focus-within::before {
   background-color: var(--special-yellow-dark);
 }
 
-.categories-link:active {
+.categories-item:active .categories-link {
   opacity: 0.3;
 }
 
