@@ -1394,13 +1394,16 @@ img {
 
 .pagination-item a {
   display: block;
-  padding: 25px 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
 }
 
 .pagination-link-number {
-  margin-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 8px;
 }
 
 .pagination-item:nth-last-child(-n+2) .pagination-link-number {
