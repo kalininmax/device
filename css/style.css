@@ -1344,6 +1344,10 @@ img {
   opacity: 0.7;
 }
 
+.catalog-item-image {
+  object-fit: contain;
+}
+
 .catalog-item-title {
   width: 270px;
   margin: 0;
@@ -1406,8 +1410,9 @@ img {
 
 .pagination{
   display: flex;
-  min-width: 760px;
+  width: 760px;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   margin-top: 40px;
@@ -1637,9 +1642,10 @@ img {
   bottom: auto;
   width: 960px;
   height: 559px;
-  background-image: url(../img/map-big.png);
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+.modal-map iframe {
+  border: 0;
 }
 
 .modal-map .modal-close {
