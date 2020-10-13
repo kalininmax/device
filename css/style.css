@@ -444,6 +444,17 @@ img {
   margin-bottom: 96px;
 }
 
+.promo-content::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: 620px;
+  width: 100px;
+  height: 7px;
+  background-color: var(--basic-white);
+  z-index: 2;
+}
+
 .promo-slider {
   display: grid;
   padding: 0;
@@ -1325,6 +1336,7 @@ img {
   position: relative;
   grid-column: 1/-1;
   margin-bottom: 30px;
+  background-color: var(--special-grey);
 }
 
 .image-wrapper:hover .catalog-item-controls,
@@ -1642,6 +1654,7 @@ img {
   bottom: auto;
   width: 960px;
   height: 559px;
+  background-color: var(--basic-white);
 }
 
 .modal-map iframe {
