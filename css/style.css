@@ -444,17 +444,6 @@ img {
   margin-bottom: 96px;
 }
 
-.promo-content::before {
-  content: '';
-  position: absolute;
-  top: 36px;
-  left: 620px;
-  width: 100px;
-  height: 7px;
-  background-color: var(--basic-white);
-  z-index: 2;
-}
-
 .promo-slider {
   display: grid;
   padding: 0;
@@ -517,7 +506,6 @@ img {
   line-height: 187px;
   font-weight: 800;
   color: var(--basic-white);
-  z-index: -1;
 }
 
 .promo-slider-item:nth-child(1)::before {
@@ -533,6 +521,16 @@ img {
 .promo-slider-item:nth-child(3)::before {
   content: '03';
   right: 53px;
+}
+
+  .promo-slider-item::after {
+    content: '';
+    position: absolute;
+    top: 36px;
+    left: 600px;
+    width: 100px;
+    height: 7px;
+    background-color: var(--basic-white);
 }
 
 .slider-image-wrapper {
