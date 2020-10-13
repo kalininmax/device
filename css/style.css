@@ -628,6 +628,7 @@ img {
   background: linear-gradient(transparent 16px, var(--special-yellow-dark) 16px, var(--special-yellow-dark) 24px, transparent 24px);
   border: none;
   cursor: pointer;
+  transition: .4s;
 }
 
 .button:hover,
@@ -1651,6 +1652,7 @@ img {
 }
 
 .modal-map iframe {
+  position: absolute;
   border: 0;
 }
 
@@ -1734,7 +1736,7 @@ img {
 }
 
 .feedback-textarea {
-  min-height: 167px;
+  height: 167px;
 }
 
 
@@ -1766,4 +1768,19 @@ img {
 
 .modal-close:active {
   opacity: 0.3;
+}
+
+.page-feedback .page-title {
+  margin-top: 30px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.page-feedback form {
+  width: 760px;
+  margin: 80px auto;
+}
+
+.page-feedback .button-submit {
+  width: 200px;
 }

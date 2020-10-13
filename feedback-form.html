@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Форма обратной связи</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="page-body">
+  <header class="main-header">
+    <nav class="main-navigation container">
+      <a class="main-header-logo" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="163" height="35" fill="none"><path fill="#000" fill-rule="evenodd" d="M-.15.7v33.6h13.53a15.72 15.72 0 0 0 11.72-4.82 16.46 16.46 0 0 0 4.71-11.98A16.46 16.46 0 0 0 19.75 1.88 15.72 15.72 0 0 0 13.38.7H-.15zm7.73 26.21V8.09h5.8a8.65 8.65 0 0 1 6.5 2.57 9.4 9.4 0 0 1 2.5 6.84 9.4 9.4 0 0 1-2.5 6.84 8.64 8.64 0 0 1-6.5 2.57h-5.8zm34.8-5.95h12.08v-7.3H42.38V8.09h13.29V.7H34.65v33.6H55.9v-7.39H42.38v-5.95zM78.72 34.3L89.74.7H81.3l-7.5 24.72L66.3.7h-8.45l11.02 33.6h9.85zm14.4 0h7.74V.7h-7.73v33.6zm38.62-1.41a15.5 15.5 0 0 0 6.04-5.7l-6.67-3.83a7.48 7.48 0 0 1-3.16 3.02 9.87 9.87 0 0 1-4.67 1.1 9.6 9.6 0 0 1-7.17-2.73 9.91 9.91 0 0 1-2.69-7.25 9.93 9.93 0 0 1 2.69-7.25 9.6 9.6 0 0 1 7.17-2.74 9.9 9.9 0 0 1 4.64 1.08 7.59 7.59 0 0 1 3.2 3.05l6.66-3.84a15.87 15.87 0 0 0-6.09-5.69 17.42 17.42 0 0 0-8.4-2.08 17.12 17.12 0 0 0-17.6 17.47 17.12 17.12 0 0 0 17.59 17.47c2.95.03 5.86-.69 8.46-2.08zm17.88-11.93h12.08v-7.3h-12.08V8.09h13.29V.7h-21.03v33.6h21.27v-7.39h-13.53v-5.95z" clip-rule="evenodd"/></svg></a>
+      <div class="main-navigation-wrapper">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="search-field" for="search-input"></label>
+          <input class="search-form-input" type="search" name="search" id="search-input" placeholder="Поиск по сайту">
+          <button class="search-form-button" type="submit">Найти</button>
+        </form>
+        <ul class="user-block">
+          <li class="user-block-item"><a class="login-link" href="blank.html">Войти</a></li>
+        </ul>
+        <ul class="market-block">
+          <li class="market-block-item"><a class="compare-link" href="blank.html">Сравнить</a></li>
+          <li class="market-block-item"><a class="cart-link" href="blank.html">Корзина</a></li>
+        </ul>
+      </div>
+      <ul class="site-navigation">
+        <li class="site-navigation-item site-navigation-catalog">
+          <a class="site-navigation-link" href="blank.html">Каталог товаров</a>
+          <ul class="site-navigation-submenu">
+            <li>
+              <ul class="submenu-column">
+                <li class="submenu-item"><a class="submenu-link" href="blank.html">Виртуальная реальность</a></li>
+                <li class="submenu-item"><a class="submenu-link" href="catalog.html">Моноподы для селфи</a></li>
+                <li class="submenu-item"><a class="submenu-link" href="blank.html">Экшн-камеры</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="submenu-column">
+                <li class="submenu-item"><a class="submenu-link" href="blank.html">Фитнес-браслеты</a></li>
+                <li class="submenu-item"><a class="submenu-link" href="blank.html">Умные часы</a></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="submenu-column">
+                <li class="submenu-item"><a class="submenu-link" href="blank.html">Квадрокоптеры</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Доставка</a></li>
+        <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Гарантия</a></li>
+        <li class="site-navigation-item"><a class="site-navigation-link" href="blank.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-feedback">
+    <h2 class="page-title">Форма обратной связи</h2>
+    <form action="https://echo.htmlacademy.ru" class="feedback-form">
+      <p class="feedback-item">
+        <label class="feedback-name-field" for="feedback-name">Ваше имя:
+          <input class="feedback-input" id="feedback-name" name="name" type="text" placeholder="Имя Фамилия" autofocus>
+        </label>
+        <label class="feedback-email-field" for="feedback-email">Ваш e-mail:
+          <input class="feedback-input" id="feedback-email" name="e-mail" type="email" placeholder="email@example.com">
+        </label>
+      </p>
+      <p class="feedback-item">
+        <label class="feedback-textarea-field" for="feedback-message">Текст письма:
+          <textarea class="feedback-textarea" name="message" id="feedback-message" placeholder="В свободной форме"></textarea>
+        </label>
+      </p>
+      <button class="button button-submit" type="submit">Отправить</button>
+    </form>
+  </main>
+
+  <footer class="page-footer main-footer">
+    <div class="container">
+      <a class="main-footer-logo" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="163" height="35" fill="none"><path fill="#000" fill-rule="evenodd" d="M-.15.7v33.6h13.53a15.72 15.72 0 0 0 11.72-4.82 16.46 16.46 0 0 0 4.71-11.98A16.46 16.46 0 0 0 19.75 1.88 15.72 15.72 0 0 0 13.38.7H-.15zm7.73 26.21V8.09h5.8a8.65 8.65 0 0 1 6.5 2.57 9.4 9.4 0 0 1 2.5 6.84 9.4 9.4 0 0 1-2.5 6.84 8.64 8.64 0 0 1-6.5 2.57h-5.8zm34.8-5.95h12.08v-7.3H42.38V8.09h13.29V.7H34.65v33.6H55.9v-7.39H42.38v-5.95zM78.72 34.3L89.74.7H81.3l-7.5 24.72L66.3.7h-8.45l11.02 33.6h9.85zm14.4 0h7.74V.7h-7.73v33.6zm38.62-1.41a15.5 15.5 0 0 0 6.04-5.7l-6.67-3.83a7.48 7.48 0 0 1-3.16 3.02 9.87 9.87 0 0 1-4.67 1.1 9.6 9.6 0 0 1-7.17-2.73 9.91 9.91 0 0 1-2.69-7.25 9.93 9.93 0 0 1 2.69-7.25 9.6 9.6 0 0 1 7.17-2.74 9.9 9.9 0 0 1 4.64 1.08 7.59 7.59 0 0 1 3.2 3.05l6.66-3.84a15.87 15.87 0 0 0-6.09-5.69 17.42 17.42 0 0 0-8.4-2.08 17.12 17.12 0 0 0-17.6 17.47 17.12 17.12 0 0 0 17.59 17.47c2.95.03 5.86-.69 8.46-2.08zm17.88-11.93h12.08v-7.3h-12.08V8.09h13.29V.7h-21.03v33.6h21.27v-7.39h-13.53v-5.95z" clip-rule="evenodd"/></svg></a>
+      <ul class="user-block main-footer-user-block">
+        <li class="user-block-item"><a class="login-link" href="blank.html">Войти</a></li>
+      </ul>
+      <ul class="market-block main-footer-market-block">
+        <li class="market-block-item"><a class="compare-link" href="blank.html">Сравнить</a></li>
+        <li class="market-block-item"><a class="cart-link" href="blank.html">Корзина</a></li>
+      </ul>
+      <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+      <ul class="footer-navigation">
+        <li class="footer-navigation-item"><a class="footer-navigation-link" href="blank.html">Доставка</a></li>
+        <li class="footer-navigation-item"><a class="footer-navigation-link" href="blank.html">Гарантия</a></li>
+        <li class="footer-navigation-item"><a class="footer-navigation-link" href="blank.html">Контакты</a></li>
+      </ul>
+      <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+      <ul class="footer-social">
+        <li class="footer-social-item"><a class="footer-social-link social-link-facebook" href="https://www.facebook.com/htmlacademy"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li class="footer-social-item"><a class="footer-social-link social-link-instagram" href="https://www.instagram.com/htmlacademy"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li class="footer-social-item"><a class="footer-social-link social-link-twitter" href="https://twitter.com/htmlacademy_ru"><span class="visually-hidden">Твитер</span></a></li>
+      </ul>
+      <p class="footer-copyright">
+        <a class="footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss"><img class="footer-copyright-image" src="img/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
+      </p>
+    </div>
+  </footer>
+</body>
