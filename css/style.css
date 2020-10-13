@@ -197,7 +197,7 @@ img {
   z-index: 2;
 }
 
-.site-navigation-catalog a {
+.site-navigation-catalog .site-navigation-link {
   position: relative;
   padding-right: 38px;
 }
@@ -219,9 +219,10 @@ img {
   width: 1040px;
   display: none;
   grid-template-columns: repeat(3, max-content);
+  gap: 63px;
   min-height: 134px;
   padding: 0  60px;
-  padding-top: 9px;
+  padding-top: 28px;
   line-height: 20px;
   list-style: none;
   text-transform: none;
@@ -234,7 +235,6 @@ img {
 }
 
 .submenu-item {
-  margin-right: 64px;
   margin-bottom: 16px;
 }
 
