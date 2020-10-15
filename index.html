@@ -61,7 +61,7 @@
     <section class="promo-content container">
       <h2 class="visually-hidden">Промо-товары</h2>
       <ol class="promo-slider">
-        <li class="promo-slider-item active">
+        <li class="promo-slider-item slider-item-show">
           <div class="slider-image-wrapper">
             <img class="promo-slider-image slider-image-1" src="img/monopod.png" width="384" height="486" alt="Монопод для селфи чёрного цвета">
           </div>
@@ -114,9 +114,9 @@
         </li>
       </ol>
       <ul class="promo-slider-controls">
-        <li><button class="current" type="button" aria-label="Первый слайд"></button></li>
-        <li><button type="button" aria-label="Второй слайд"></button></li>
-        <li><button type="button" aria-label="Третий слайд"></button></li>
+        <li><button class="promo-slider-controls-button current" type="button" aria-label="Первый слайд"></button></li>
+        <li><button class="promo-slider-controls-button" type="button" aria-label="Второй слайд"></button></li>
+        <li><button class="promo-slider-controls-button" type="button" aria-label="Третий слайд"></button></li>
       </ul>
     </section>
     <section class="categories container">
@@ -164,7 +164,7 @@
         <div class="services-inner">
           <h2 class="visually-hidden">Услуги</h2>
           <ul class="services-slider">
-            <li class="services-slider-item item-delivery active">
+            <li class="services-slider-item item-delivery slider-item-show">
               <h3 class="service-title content-title">Доставка</h3>
               <p class="service-description">Мы с удовольствием доставим ваш товар прямо к вашему <br> подъезду совершенно
                 бесплатно! Ведь мы неплохо <br> заработаем, поднимая его на ваш этаж.</p>
@@ -181,7 +181,7 @@
             </li>
           </ul>
           <ul class="services-controls">
-            <li class="services-controls-item controls-item-current"><button class="button services-controls-button" type="button">Доставка</button></li>
+            <li class="services-controls-item"><button class="button services-controls-button current" type="button">Доставка</button></li>
             <li class="services-controls-item"><button class="button services-controls-button" type="button">Гарантия</button></li>
             <li class="services-controls-item"><button class="button services-controls-button" type="button">Кредит</button></li>
           </ul>
@@ -217,7 +217,7 @@
           бывает.</p>
         <a class="contacts-map-link" href="https://goo.gl/maps/GNsko2cCmwdUMsfz7">
           <img class="contacts-map-image" src="img/map-image.png" width="560" height="222" alt="Офис компании на карте: город Москва, улица Строителей, 15"></a>
-        <a class="contacts-link button" href="feedback-form.html">Напишите нам</a>
+        <a class="feedback-link button" href="feedback-form.html">Напишите нам</a>
       </section>
     </div>
   </main>
@@ -274,6 +274,8 @@
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть"></button>
   </section>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
