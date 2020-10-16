@@ -1627,7 +1627,23 @@ img {
   left: 0;
   margin: 0 auto;
   box-shadow: 0px 10px 16px var(--special-black-shadow);
-  z-index: 10;
+  z-index: 110;
+}
+
+.modal-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--basic-half-grey);
+  opacity: 0.7;
+  z-index: 100;
+}
+
+.modal-overlay-show {
+  display: block;
 }
 
 .modal-map {
@@ -1706,8 +1722,8 @@ img {
   border-color: var(--special-yellow);
 }
 
-.feedback-item input:invalid,
-.feedback-item textarea:invalid {
+.feedback-form input:invalid,
+.feedback-form textarea:invalid {
   background-color: var(--special-pink);
 }
 
@@ -1725,7 +1741,6 @@ img {
 .feedback-textarea {
   height: 167px;
 }
-
 
 .feedback-name-field,
 .feedback-email-field {
@@ -1770,6 +1785,11 @@ img {
 
 .page-feedback .button-submit {
   width: 200px;
+}
+
+.page-blank .page-title {
+  margin-top: 100px;
+  text-align: center;
 }
 
 .modal-show {

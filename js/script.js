@@ -1,3 +1,4 @@
+const overlayModal = document.querySelector('.modal-overlay');
 const mapLink = document.querySelector('.contacts-map-link');
 const mapModal = document.querySelector('.modal-map');
 const feedbackLink = document.querySelector('.feedback-link');
@@ -6,6 +7,7 @@ const feedbackForm = feedbackModal.querySelector('.feedback-form');
 const feedbackName = feedbackModal.querySelector('#feedback-name');
 const feedbackEmail = feedbackModal.querySelector('#feedback-email');
 const feedbackMessage = feedbackModal.querySelector('#feedback-message');
+const feedbackSubmitButton = feedbackModal.querySelector('.button-submit');
 const promoSlide = document.querySelectorAll('.promo-slider-item');
 const promoSliderButton = document.querySelectorAll('.promo-slider-controls-button');
 const servicesSlide = document.querySelectorAll('.services-slider-item');
@@ -22,23 +24,6 @@ try {
   isStorageSupport = false;
 };
 
-mapLink.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  mapModal.classList.add('modal-show');
-});
-
-feedbackLink.addEventListener('click', function(evt) {
-  evt.preventDefault();
-  feedbackModal.classList.add('modal-show');
-  if (storage) {
-    feedbackName.value = storage.name;
-    feedbackEmail.value = storage.email;
-    feedbackMessage.value = storage.message;
-  } else {
-    feedbackName.focus();
-  }
-});
-
 feedbackForm.addEventListener('submit', function(evt) {
   if (!feedbackName.value || !feedbackEmail.value || !feedbackMessage.value) {
     evt.preventDefault();
@@ -54,20 +39,46 @@ feedbackForm.addEventListener('submit', function(evt) {
   }
 });
 
+mapLink.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  overlayModal.classList.add('modal-overlay-show');
+  mapModal.classList.add('modal-show');
+});
+
+feedbackLink.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  overlayModal.classList.add('modal-overlay-show');
+  feedbackModal.classList.add('modal-show');
+  if (storage.name !== null) {
+    feedbackName.value = storage.name;
+    feedbackEmail.value = storage.email;
+    feedbackMessage.value = storage.message;
+    feedbackSubmitButton.focus();
+  } else {
+    feedbackName.focus();
+  }
+});
+
+function removeModal(modalName, evt) {
+  evt.preventDefault();
+  overlayModal.classList.remove('modal-overlay-show');
+  modalName.classList.remove('modal-show');
+  modalName.classList.remove('modal-error');
+};
+
 function modalClose(modalName) {
   modalName.querySelector('.modal-close').addEventListener('click', function(evt) {
-    evt.preventDefault(); 
-    modalName.classList.remove('modal-show');
-    modalName.classList.remove('modal-error');
+    removeModal(modalName,evt);
   });
   window.addEventListener('keydown', function(evt) {
     if (evt.key === 'Escape') {
       if (modalName.classList.contains('modal-show')) {
-        evt.preventDefault();
-        modalName.classList.remove('modal-show');
-        modalName.classList.remove('modal-error');
+        removeModal(modalName,evt);
       }
     }
+  });
+  overlayModal.addEventListener('click', function(evt) {
+    removeModal(modalName,evt);
   });
 };
 
@@ -86,6 +97,33 @@ function slider(sliderItem, controlsItem) {
     });
   });
 };
+
+function focusInsideModal(modalName) {
+  let focusableElementsString = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [tabindex="0"], [contenteditable]';
+  let focusableElements = modalName.querySelectorAll(focusableElementsString);
+  focusableElements = Array.prototype.slice.call(focusableElements);
+  let firstTabStop = focusableElements[0];
+  let lastTabStop = focusableElements[focusableElements.length - 1];
+  firstTabStop.focus();
+  modalName.addEventListener('keydown', function(evt) {
+    if (evt.key === 'Tab') {
+      if (evt.key === 'Shift') {
+        if (document.activeElement === firstTabStop) {
+          evt.preventDefault();
+          lastTabStop.focus();
+        }
+      } else {
+        if (document.activeElement === lastTabStop) {
+          evt.preventDefault();
+          firstTabStop.focus();
+        }
+      }
+    }
+  });
+};
+
+focusInsideModal(mapModal);
+focusInsideModal(feedbackModal);
 
 modalClose(feedbackModal);
 modalClose(mapModal);
