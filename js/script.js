@@ -8,10 +8,10 @@ const feedbackName = feedbackModal.querySelector('#feedback-name');
 const feedbackEmail = feedbackModal.querySelector('#feedback-email');
 const feedbackMessage = feedbackModal.querySelector('#feedback-message');
 const feedbackSubmitButton = feedbackModal.querySelector('.button-submit');
-const promoSlide = document.querySelectorAll('.promo-slider-item');
-const promoSliderButton = document.querySelectorAll('.promo-slider-controls-button');
-const servicesSlide = document.querySelectorAll('.services-slider-item');
-const servicesSliderButton = document.querySelectorAll('.services-controls-button');
+const promoSlides = document.querySelectorAll('.promo-slider-item');
+const promoSliderButtons = document.querySelectorAll('.promo-slider-controls-button');
+const servicesSlides = document.querySelectorAll('.services-slider-item');
+const servicesSliderButtons = document.querySelectorAll('.services-controls-button');
 
 let isStorageSupport = true;
 let storage = {};
@@ -128,5 +128,5 @@ focusInsideModal(feedbackModal);
 modalClose(feedbackModal);
 modalClose(mapModal);
 
-slider(promoSlide, promoSliderButton);
-slider(servicesSlide, servicesSliderButton);
+slider(promoSlides, promoSliderButtons);
+slider(servicesSlides, servicesSliderButtons);

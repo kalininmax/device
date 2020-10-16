@@ -63,6 +63,7 @@
 
 .page-body {
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   min-width: 1200px;
@@ -181,11 +182,10 @@ img {
 }
 
 .navigation-link-catalog {
-  position: relative;
   padding-right: 38px;
 }
 
-.navigation-link-catalog::after {
+.site-navigation-catalog::after {
   content: '';
   position: absolute;
   right: 0;
@@ -202,6 +202,7 @@ img {
   left: -60px;
   width: 1040px;
   display: none;
+  grid-template-columns: repeat(3, -webkit-max-content);
   grid-template-columns: repeat(3, max-content);
   gap: 63px;
   min-height: 134px;
@@ -235,7 +236,7 @@ img {
   letter-spacing: 0.2em;
 }
 
-.site-navigation-link[href]:not(::after):hover,
+.site-navigation-link[href]:hover,
 .site-navigation-link[href]:focus,
 .submenu-link[href]:hover,
 .submenu-link[href]:focus {
@@ -473,7 +474,8 @@ img {
   position: relative;
   display: none;
   grid-template-columns: 525px 560px;
-  column-gap: 44px;
+  -moz-column-gap: 44px;
+       column-gap: 44px;
   min-height: 511px;
   padding-left: 30px;
 }
@@ -569,9 +571,12 @@ img {
 
 .promo-slider-specification {
   display: grid;
+  grid-template-columns: -webkit-max-content;
   grid-template-columns: max-content;
+  grid-template-rows: -webkit-min-content 1fr;
   grid-template-rows: min-content 1fr;
-  column-gap: 63px;
+  -moz-column-gap: 63px;
+       column-gap: 63px;
   row-gap: 15px;
   max-width: 450px;
   margin: 0;
@@ -627,6 +632,7 @@ img {
 
 .categories-list {
   display: grid;
+  grid-template-columns: repeat(6, -webkit-min-content);
   grid-template-columns: repeat(6, min-content);
   justify-content: center;
   gap: 40px;
@@ -816,7 +822,8 @@ img {
 .brands-list {
   display: grid;
   grid-template-columns: repeat(4, 260px);
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -824,21 +831,24 @@ img {
 
 .brands-link {
   display: block;
-  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
   opacity: 0.2;
 }
 
 .brands-link:hover,
 .brands-link:focus,
 .brands-link:active {
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
   opacity: 1;
 }
 
 .index-content {
   display: grid;
   grid-template-columns: 560px 560px;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }
 
 .about-us,
@@ -1122,7 +1132,9 @@ img {
   position: relative;
   display: block;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .filter-checkbox label::before {
@@ -1263,7 +1275,8 @@ img {
   margin: 0;
   padding: 0;
   margin-left: 72px;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 48px;
   list-style: none;
 }
@@ -1271,7 +1284,9 @@ img {
 .catalog-item {
   position: relative;
   display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
   grid-template-columns: max-content max-content;
+  grid-template-rows: -webkit-min-content -webkit-max-content;
   grid-template-rows: min-content max-content;
 }
 
@@ -1322,7 +1337,8 @@ img {
 }
 
 .catalog-item-image {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .catalog-item-title {
@@ -1471,6 +1487,7 @@ img {
 .main-footer .container {
   position: relative;
   display: grid;
+  grid-template-columns: auto auto -webkit-min-content;
   grid-template-columns: auto auto min-content;
   align-items: start;
 }
@@ -1660,8 +1677,8 @@ img {
 }
 
 .modal-map .modal-close {
-  top: 29px;
-  right: 36px;
+  top: 22px;
+  right: 19px;
 }
 
 .modal-feedback {
@@ -1794,11 +1811,31 @@ img {
 
 .modal-show {
   display: block;
-  animation: bounce 0.6s;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes bounce {
@@ -1816,6 +1853,28 @@ img {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
@@ -1849,7 +1908,8 @@ img {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
