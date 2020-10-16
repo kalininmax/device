@@ -127,7 +127,7 @@ img {
   padding-bottom: 48px;
 }
 
-.main-navigation-wrapper {
+.main-navigation-inner {
   display: flex;
   align-items: center;
   padding: 0 60px;
@@ -180,12 +180,12 @@ img {
   z-index: 2;
 }
 
-.site-navigation-catalog .site-navigation-link {
+.navigation-link-catalog {
   position: relative;
   padding-right: 38px;
 }
 
-.site-navigation-catalog .site-navigation-link::after {
+.navigation-link-catalog::after {
   content: '';
   position: absolute;
   right: 0;
@@ -194,6 +194,7 @@ img {
   background-image: url(../img/icon-plus.svg);
   background-repeat: no-repeat;
   background-position: 0 6px;
+  opacity: 0.3;
 }
 
 .site-navigation-submenu {
@@ -234,7 +235,7 @@ img {
   letter-spacing: 0.2em;
 }
 
-.site-navigation-link[href]:hover,
+.site-navigation-link[href]:not(::after):hover,
 .site-navigation-link[href]:focus,
 .submenu-link[href]:hover,
 .submenu-link[href]:focus {
