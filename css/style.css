@@ -258,7 +258,8 @@ img {
   width: 360px;
   padding: 0;
   padding-left: 38px;
-  border: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
   outline: none;
   font-family: var(--font-family-opensans);
   font-weight: 300;
@@ -291,7 +292,7 @@ img {
 }
 
 .search-form:focus-within .search-form-input {
-  border-bottom: 2px solid var(--basic-black);
+  border-bottom-color: var(--basic-black);
   opacity: 1;
 }
 
