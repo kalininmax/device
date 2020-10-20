@@ -188,6 +188,7 @@ img {
 .site-navigation-catalog::after {
   content: '';
   position: absolute;
+  top: 0;
   right: 0;
   width: 22px;
   height: 100%;
